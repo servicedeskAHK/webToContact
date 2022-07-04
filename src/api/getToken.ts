@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 async function getToken() {
-    const url = `https://login.salesforce.com/services/oauth2/token?grant_type=password
+    const url = `https://ahkbrasil.my.salesforce.com/services/oauth2/token?grant_type=password
     &client_id=${import.meta.env.VITE_ACCESS_ID}
     &client_secret=${import.meta.env.VITE_ACCESS_SECRET}
     &username=${import.meta.env.VITE_USERNAME}
@@ -9,7 +9,7 @@ async function getToken() {
     `
 
 
-    const response = await axios.get(url, {
+    const response = await axios.post(url, {
         headers: {
             "Access-Control-Allow-Origin": "*"
         }

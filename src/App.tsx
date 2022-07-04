@@ -31,7 +31,7 @@ function App() {
       AccountId: '0011K00002KrytkQAB',
     }
 
-    const tokenData = await getToken();
+    const tokenData = getToken();
 
     console.log(tokenData);
 
