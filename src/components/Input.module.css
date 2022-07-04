@@ -1,0 +1,7 @@
+.inputWrapper {
+    margin: 10px 20px;
+}
+
+.inputWrapper>span {
+    margin-right: 10px;
+}
