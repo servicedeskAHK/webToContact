@@ -2,6 +2,7 @@
   "name": "webtocontactahk",
   "private": true,
   "version": "0.0.0",
+  "proxy": "https://ahkbrasil.my.salesforce.com/services",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -9,6 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

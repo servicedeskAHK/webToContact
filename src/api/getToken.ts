@@ -1,23 +1,22 @@
 import axios from 'axios';
 
+axios.defaults.baseURL = "https://ahkbrasil.my.salesforce.com/services";
+
 async function getToken() {
-    const url = `https://ahkbrasil.my.salesforce.com/services/oauth2/token?grant_type=password
+    const url = `/oauth2/token?grant_type=password
     &client_id=${import.meta.env.VITE_ACCESS_ID}
     &client_secret=${import.meta.env.VITE_ACCESS_SECRET}
     &username=${import.meta.env.VITE_USERNAME}
     &password=${import.meta.env.VITE_PASSWORD}
     `
 
-
     const response = await axios.post(url, {
         headers: {
-            "Access-Control-Allow-Origin": "*"
+            'Content-Type': 'application/x-www-form-urlencoded'
         }
     });
 
-    if (response.status === 200) {
-        return response;
-    }
+    return response
 }
 
 export { getToken };
